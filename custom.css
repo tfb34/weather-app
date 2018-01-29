@@ -1,0 +1,132 @@
+
+body{
+	padding:0;margin:0;
+	color:white;
+}
+p{
+	margin-bottom: 0.5em;
+}
+span{
+	color:white;
+}
+.input-box{
+	border:0px;
+	border-bottom: 2px solid grey;
+	font-size: 14px;
+	box-sizing: border-box;
+	padding:2%;
+}
+#city-input{
+	width:50%;
+}
+#state-input{
+	margin-left: 2%;
+	width:30%;
+}
+form{
+	padding-bottom: 1em;
+	padding-top: 1em;
+	padding-left: 9%;
+}
+#search-btn{
+	border:0px;
+	margin-top: 1em;
+	padding:2%;
+}
+.error{
+	display: block;
+	font-size: 12px;
+	color:red;
+	margin-top: 0.5em;
+}
+
+#info{
+	padding:1em;
+	color: white;
+	padding-bottom: 5em;
+}
+#header{
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 2.5em;
+}
+#temp{
+	margin:0;padding:0;
+	font-size: 2em;
+	float:left;
+
+}
+#rightNow{
+	padding: 1em;
+	padding-bottom: 8em;
+}
+#rightNow p{
+	float: left;
+	width:50%;
+}
+.clear{
+	display: table;
+	content:"";
+	clear:both;
+	width:100%;
+}
+.align-right{
+	text-align: right;
+}
+#icon{
+	float:right;
+}
+#pic{
+	width:100%;
+	height:60vw;
+	margin-top: 2em;
+}
+
+.darkNight{
+	background-color: #262A33;/*night*/ 
+}
+.lightNight{
+	background-color: #1F4371;/*nighttime blue*/
+}
+.darkDay{
+	background-color: #609AE1;
+}
+.lightDay{
+	background-color: #76A7E3;
+}
+
+@media only screen and (min-width: 640px){/*640px*/
+
+	#city-input, #state-input, #search-btn{
+	    
+	    padding: 0.5em;
+	    margin-bottom: 1em;
+	}
+	
+	form{
+		padding-left: 25%;
+		padding-right: 25%;
+		padding-top: 5%;
+	}
+	#info{
+		padding-left: 25%;
+		padding-right: 25%;
+	}
+	#pic{
+		height:20vw;
+		
+		margin-top: 5%;
+		margin-bottom: 10%;
+	}
+	#rightNow{
+		padding-left: 25%;
+		padding-right: 25%;
+		padding-bottom: 10em;
+		padding-top: 5%;
+	}
+	#search-btn:hover{
+		background-color: grey;
+		color:white;
+	}
+
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Weather Now</title>
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <form>
+        <input type="text" class="input-box" id="city-input" name="city" placeholder="city" ><input type="text" class="input-box" id="state-input" name="state" placeholder="state" >
+        <input type="button" id="search-btn" name="search" value="Go">
+        <span id="error"></span>
+
+        <div id="radio-wrapper">
+            <input type="radio" id="us" name="option" value="us" checked="true"><span>U.S.</span>
+            <input type="radio" id="outside" name="option" value="outside"><span>Outside U.S.</span>
+        </div>
+    </form>
+    <div id="info">
+        <p id="header"></p>
+        <p id="location"></p>
+        <div id="tempWrapper" class="clear">
+            <p id="temp"></p>
+            <img id="icon" src="#">
+        </div>
+        <p id="weather"></p>
+        <p id="feels"></p>
+        <p id="uv"></p>
+
+        <img id="pic" src="">
+    </div>
+
+
+    <div id="rightNow">
+        <p id="title">RIGHT NOW</p>
+        <div id="windWrapper" class="clear">
+            <p>Wind</p>
+            <p id="wind" class="align-right"></p>
+        </div>
+        <div id="humidityWrapper" class="clear">
+            <p>Humidity</p>
+            <p id="humidity" class="align-right"></p>
+        </div>
+        <div id="dewPointWrapper" class="clear">
+            <p class="left">Dew Point</p>
+            <p id="dewPoint" class="align-right"></p>
+        </div>
+        <div id="pressureWrapper" class="clear">
+            <p class="left">Pressure</p>
+            <p id="pressure" class="align-right"></p>
+        </div>
+        <div id="visibilityWrapper" class="clear">
+            <p class="left">Visibility</p>
+            <p id="visibility" class="align-right"></p>
+        </div>
+    </div>
+</body>
+</html>
