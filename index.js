@@ -128,7 +128,11 @@ window.onload = function(){
 		header.innerHTML = r['observation_time'];
 		location.innerHTML = r.display_location['full'];
 		temp.innerHTML = r['temp_'+type] + x;
-		icon.src = r['icon_url'];
+
+		let str = r['icon_url'];
+		console.log(str.replace(/http/i, 'https'));
+		icon.src = str.replace(/http/i, 'https');
+		
 		weather.innerHTML = r['weather'].toUpperCase();
 
 		getPic(r['weather']);
