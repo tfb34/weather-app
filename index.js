@@ -10,6 +10,7 @@ window.onload = function(){
 
 	// info
 	const location = document.getElementById('location');
+	const checkbox = document.getElementById('checkbox');
 	const header = document.getElementById('header');
 	const temp = document.getElementById('temp');
 	const icon = document.getElementById('icon');
@@ -41,6 +42,16 @@ window.onload = function(){
 	us.addEventListener("click", function(){
 		changeForm(this.id);
 	});
+
+	checkbox.addEventListener("click", changeDataFormat);
+
+	function changeDataFormat(){
+		if(checkbox.checked){
+			displayData(resp, "c");
+		}else{
+			displayData(resp, "f");
+		}
+	}
 
 	document.addEventListener("keydown",function(event){
 		if(event.which === 13){
@@ -98,12 +109,17 @@ window.onload = function(){
 			})
 			.then(function(response){
 				resp = response.current_observation;// in case user wants to change to C
-				displayData(response.current_observation, 'f');
+				let format = 'f';
+				if(checkbox.checked){
+					format = 'c';
+				}
+				displayData(response.current_observation, format);
 			})
 			.catch(e => {
 				console.log(e)
 			})
 	}
+
 	function displayData(r, type){
 		let x = '&#8457;'; // f
 		if(type === 'c'){

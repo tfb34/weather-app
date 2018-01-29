@@ -94,6 +94,44 @@ form{
 .lightDay{
 	background-color: #76A7E3;
 }
+/*toggle switch*/
+.switch{
+  position: relative;
+  display: block;
+  background-color: grey;/*remove*/
+  width:60px;
+  height:30px;
+}
+#checkbox{
+  display: none;
+}
+.slider{
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color: #CCCCCC;
+  transition: 0.4s;
+}
+.slider::before{
+  position: absolute;
+  content:"";
+  background-color: white;
+  width:24px;
+  height:24px;
+  left:4px;
+  top:3px;
+  transition: 0.6s;
+}
+
+input:checked + .slider::before{
+  transform: translateX(26px);
+}
+
+input:checked + .slider{
+  background-color: orange; /*#2196F3;*/
+}
 
 @media only screen and (min-width: 640px){/*640px*/
 
