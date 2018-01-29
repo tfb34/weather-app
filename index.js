@@ -30,7 +30,7 @@ window.onload = function(){
 
 	let resp;
 
-	let initialRequest = 'http://api.wunderground.com/api/'+api_key+'/conditions/q/autoip.json';
+	let initialRequest = 'https://api.wunderground.com/api/'+api_key+'/conditions/q/autoip.json';
 	
 	makeRequest(initialRequest);
 
@@ -97,7 +97,7 @@ window.onload = function(){
 		let form = document.getElementsByTagName('form')[0];
 		let city = form['city'].value;
 		let state = form['state'].value;
-		let request = 'http://api.wunderground.com/api/'+api_key+'/conditions/q/'+state+'/'+city+'.json';
+		let request = 'https://api.wunderground.com/api/'+api_key+'/conditions/q/'+state+'/'+city+'.json';
 		makeRequest(request);
 		
 	}
